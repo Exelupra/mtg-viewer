@@ -16,14 +16,14 @@ Aide qui peut être utile:
 - [Il est possible d'utiliser le symfony profiler avec une commande](https://symfony.com/doc/current/console.html#profiling-commands)
 - Pour accéder au profiler: [http://localhost/_profiler](http://localhost/_profiler) (adapter l'URL si besoin)
 
-## 1. Ajout de logs 
+## 1. Ajout de logs
 - Ajouter des logs pour chaque appel à l'API
 - Ajouter des logs pour le début, la fin, la durée et les erreurs de l'import
 
 ## 2. Ajouter la recherche de carte
 Si vous parcourez le site, vous verez le listing de toutes les cartes, et l'affichage d'une carte en particulier.  
 Il y a une page en TODO, qui est la recherche de carte. Créer cette page et les API necessaires.  
-Consigne: 
+Consigne:
 - La recherche se fait sur le nom de la carte
 - L'API utiliser doit être documentée via OpenAPI (Swagger)
 - N'afficher que les 20 premiers résultats

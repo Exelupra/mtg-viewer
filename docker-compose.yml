@@ -17,9 +17,9 @@ services:
         - ${SERVER_PORT:-80}:80
     command: php -S 0.0.0.0:80 -t /var/www/html/public
     depends_on:
-        - db
+      - dbMaria
 
-  db:
+  dbMaria:
     image: mariadb:10
     ports:
       - ${DB_PORT:-3306}:3306
@@ -30,6 +30,13 @@ services:
       MARIADB_PASSWORD: ${DB_PASSWORD:-password}
     volumes:
         - db-data:/var/lib/mysql
+  adminer:
+    image: adminer
+    ports:
+      - '8080:8080'
+    depends_on:
+      - dbMaria
+
   vite:
     image: node:20-alpine
     volumes:

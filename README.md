@@ -43,7 +43,7 @@ docker compose pull
 docker compose build
 docker compose run --rm php composer install
 docker compose run --rm vite npm install
-docker compose run --rm php bin/console doctrine:migrations:migrate --no-interaction
+docker compose run --rm php php bin/console doctrine:migrations:migrate --no-interaction
 ````
 
 Ensuite, il faut récupérer les données nécessaires pour le projet
